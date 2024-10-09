@@ -1,0 +1,31 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<h2>Query Builder</h2>
+<form id="dbConnectionForm">
+    <div>
+        <label for="host">Host:</label>
+        <input type="text" name="host" id="host" required>
+    </div>
+    <div>
+        <label for="port">Port:</label>
+        <input type="text" name="port" id="port" required>
+    </div>
+    <div>
+        <label for="dbname">Database Name:</label>
+        <input type="text" name="dbname" id="dbname" required>
+    </div>
+    <div>
+        <label for="user">User:</label>
+        <input type="text" name="user" id="user" required>
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+    </div>
+    <button type="button" id="connectButton">Connect</button>
+</form>
+<div id="queryBox" style="display:none;">
+    <textarea id="queryInput" rows="4" cols="50" placeholder="Write your SQL query here..."></textarea>
+</div>
+{% endblock %}

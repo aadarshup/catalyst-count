@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #f8f9fa;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tabs button {
+    margin-right: 10px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.logout {
+    align-self: center;
+}

@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
+    <title>{% block title %}Django Project{% endblock %}</title>
+</head>
+<body>
+    <div class="header">
+        <div class="tabs">
+            <button id="uploadDataTab">Upload Data</button>
+            <button id="queryBuilderTab">Query Builder</button>
+            <button id="usersTab">Users</button>
+        </div>
+        <a href="{% url 'account_logout' %}" class="logout">Logout</a>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <script src="{% static 'myapp/scripts.js' %}"></script>
+</body>
+</html>
